@@ -1,19 +1,19 @@
 [user]
-	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+  name = <%= config['name'] %>
+  email = <%= config['email'] %> 
 [alias]
-	co = checkout
+  co = checkout
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = vim
-	autocrlf = input
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  editor = vim
+  autocrlf = input
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [credential]
-	helper = cacha
+  helper = cache
