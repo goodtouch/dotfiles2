@@ -1,0 +1,87 @@
+""
+"" Leader key
+""
+let mapleader = ","
+
+""
+"" General Mappings
+""   nmap: Normal mode: When typing commands
+""   vmap: Visual mode: When typing when the Visual area is highlighted
+""   omap: Operator-pending mode: When an operator is pending (after 'd', 'y', ...)
+""   imap: Insert mode: When editing (also used in replace mode)
+""   cmap: Command-line mode: When entering a ':' or '/' command
+""   map: Normal, Visual+Select, Operator pending
+""   for special cases (xmap, smap, lmap) see here: 
+""     http://vimdoc.sourceforge.net/htmldoc/map.html#mapmode-o
+""
+
+" use :w!! to write to a file using sudo if you forgot to 'sudo vim file'
+" (it will prompt for sudo password when writing)
+cmap w!! %!sudo tee > /dev/null %
+
+" Toggle paste mode
+nmap <leader>p :set invpaste<CR>:set paste?<CR>
+imap <leader>p <ESC>:set invpaste<CR>:set paste?<CR>
+
+" Toggle text wrapping
+nmap <leader>tw :set invwrap<CR>:set wrap?<CR>
+
+" Toggle hlsearch
+nmap <leader>hs :set hlsearch! hlsearch?<CR>
+
+" cd to the directory containing the file in the buffer
+nmap <silent> <leader>cd :lcd %:h<CR>
+
+" Create the directory containing the file in the buffer
+nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
+
+" Some helpers to edit mode
+" http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+" Open in window
+map <leader>ew :e %%
+" Open in split
+map <leader>es :sp %%
+" Open in vertical split
+map <leader>ev :vsp %%
+" Open in tab
+map <leader>et :tabe %%
+
+" Adjust viewports to the same size
+map <Leader>= <C-w>=
+
+" format the entire file
+nmap <leader>fef ggVG=
+
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
+
+" find merge conflict markers
+nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
+" Map the arrow keys to be based on display lines, not physical lines
+map <Down> gj
+map <Up> gk
+
+" Indenting & Outdenting
+" while keeping the original selection in visual mode
+vmap <C-l> >gv
+vmap <C-h> <gv
+
+nmap <C-l> >>
+nmap <C-h> <<
+
+imap <C-l> <Esc>>>i
+imap <C-h> <Esc><<i
+
+" Bubble single lines (works with the unimpaired plugin)
+nmap <Leader><Up> [e
+nmap <Leader><Down> ]e
+nmap <C-k> [e
+nmap <C-j> ]e
+
+" Bubble multiple lines (works with the unimpaired plugin)
+vmap <Leader><Up> [egv
+vmap <Leader><Down> ]egv
+vmap <C-k> [egv
+vmap <C-j> ]egv
