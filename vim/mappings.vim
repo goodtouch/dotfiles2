@@ -75,13 +75,9 @@ imap <C-l> <Esc>>>i
 imap <C-h> <Esc><<i
 
 " Bubble single lines (works with the unimpaired plugin)
-nmap <Leader><Up> [e
-nmap <Leader><Down> ]e
 nmap <C-k> [e
 nmap <C-j> ]e
 
 " Bubble multiple lines (works with the unimpaired plugin)
-vmap <Leader><Up> [egv
-vmap <Leader><Down> ]egv
 vmap <C-k> [egv
 vmap <C-j> ]egv
