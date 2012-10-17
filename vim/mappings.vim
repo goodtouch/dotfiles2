@@ -83,11 +83,18 @@ vmap <C-k> [egv
 vmap <C-j> ]egv
 
 ""
-"" Fugitive (git) mappings
+"" Bundles custom mappings
 ""
+
+" Fugitive (git)
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gp :Git push<CR>
+
+" NERDCommenter (remap toggle comments from <leader>n space to <leader>/)
+nmap <leader>/ <plug>NERDCommenterToggle<CR>
+vmap <leader>/ <plug>NERDCommenterToggle<CR>
+imap <leader>/ <ESC><plug>NERDCommenterToggle<CR>i
