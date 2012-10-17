@@ -2,6 +2,22 @@ require 'rake'
 require 'erb'
 require 'yaml'
 
+desc "Check dependencies"
+task :deps do
+  puts "Checking dependencies..."
+  all_deps = true
+  %w[ack ctags git].each do |dep|
+    has_dep = ENV['PATH'].split(':').any? {|folder| File.exists?(folder + "/#{dep}")}
+    all_deps = all_deps && has_dep
+    puts "#{dep}: #{has_dep ? 'yes' : 'no'}"
+  end
+  if !all_deps
+    puts "Some dependencies are missing, please consider installing them with:"
+    puts "sudo apt-get install exuberant-ctags ack-grep"
+    STDIN.getc
+  end
+end
+
 desc "create/update the config file"
 task :configure do
   keys = YAML.load_file('config.yml.example').keys
