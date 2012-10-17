@@ -81,3 +81,13 @@ nmap <C-j> ]e
 " Bubble multiple lines (works with the unimpaired plugin)
 vmap <C-k> [egv
 vmap <C-j> ]egv
+
+""
+"" Fugitive (git) mappings
+""
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gl :Glog<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gp :Git push<CR>
