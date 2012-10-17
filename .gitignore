@@ -1,1 +1,3 @@
 config.yml
+vim/_backup/*
+vim/_temp/*
