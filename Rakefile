@@ -2,9 +2,9 @@ require 'rake'
 require 'erb'
 require 'yaml'
 
-desc "Check dependencies"
+desc "check dependencies"
 task :deps do
-  puts "Checking dependencies..."
+  puts "checking dependencies..."
   all_deps = true
   %w[ack ctags git].each do |dep|
     has_dep = ENV['PATH'].split(':').any? {|folder| File.exists?(folder + "/#{dep}")}

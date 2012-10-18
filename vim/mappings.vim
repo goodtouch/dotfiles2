@@ -11,7 +11,7 @@ let mapleader = ","
 ""   imap: Insert mode: When editing (also used in replace mode)
 ""   cmap: Command-line mode: When entering a ':' or '/' command
 ""   map: Normal, Visual+Select, Operator pending
-""   for special cases (xmap, smap, lmap) see here: 
+""   for special cases (xmap, smap, lmap) see here:
 ""     http://vimdoc.sourceforge.net/htmldoc/map.html#mapmode-o
 ""
 
@@ -94,7 +94,7 @@ nmap <leader>gl :Glog<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gp :Git push<CR>
 
-" NERDCommenter (remap toggle comments from <leader>n space to <leader>/)
+" NERDCommenter (remap toggle comments from <leader>c space to <leader>/)
 nmap <leader>/ <plug>NERDCommenterToggle<CR>
 vmap <leader>/ <plug>NERDCommenterToggle<CR>
 imap <leader>/ <ESC><plug>NERDCommenterToggle<CR>i
