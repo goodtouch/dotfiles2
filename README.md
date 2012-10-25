@@ -84,4 +84,6 @@ Type `p` on a file to enter `git add -p` and stage specific hunks in the file.
 - `<leader>gc` maps to `:Gcommit<CR>`
 - `<leader>gp` maps to `:Git push<CR>`
 
+#### Zoom Windows (ZoomWin)
 
+When working with split windows, ZoomWin lets you zoom into a window and out again using `<C-w> o`
