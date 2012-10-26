@@ -27,6 +27,10 @@ I'll try to list them all here:
 
 ## vim
 
+### Useful commands
+
+- Use `:%s/to_repace/replace_by/g` to perform a find & replace in the file
+
 ### Cheat sheet wallpapers
 
 - Keyboard [cheat sheet](http://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png)
