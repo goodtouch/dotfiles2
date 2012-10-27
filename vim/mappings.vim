@@ -98,3 +98,6 @@ nmap <leader>gp :Git push<CR>
 nmap <leader>/ <plug>NERDCommenterToggle<CR>
 vmap <leader>/ <plug>NERDCommenterToggle<CR>
 imap <leader>/ <ESC><plug>NERDCommenterToggle<CR>i
+
+" NERDTree
+nmap <leader>n :NERDTreeToggle<CR>

@@ -70,7 +70,15 @@ NERDCommenter allows you to wrangle your code comments, regardless of filetype. 
 
 **Customizations:**
 
-- `<leader>/` maps to `<plug>NERDCommenterTottle<CR>`
+- `<leader>/` toggles comments
+
+#### File explorer (NERDTree)
+
+NERDTree is a file explorer plugin that provides "project drawer" functionality to your vim projects. You can learn more about it with `:help NERDTree`.
+
+**Customizations:**
+
+- `<leader>n` toggle explorer
 
 #### Git support (Fugitive)
 
