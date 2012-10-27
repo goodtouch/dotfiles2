@@ -28,3 +28,9 @@
 [submodule "vim/bundles/utils/nerdtree"]
 	path = vim/bundles/utils/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundles/syntaxes/markdown"]
+	path = vim/bundles/syntaxes/markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "vim/bundles/syntaxes/rails"]
+	path = vim/bundles/syntaxes/rails
+	url = https://github.com/tpope/vim-rails.git
