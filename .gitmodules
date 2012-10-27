@@ -34,3 +34,6 @@
 [submodule "vim/bundles/syntaxes/rails"]
 	path = vim/bundles/syntaxes/rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundles/utils/ack"]
+	path = vim/bundles/utils/ack
+	url = https://github.com/mileszs/ack.vim.git

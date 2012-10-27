@@ -86,6 +86,9 @@ vmap <C-j> ]egv
 "" Bundles custom mappings
 ""
 
+" Ack (grep-like text finder)
+nmap <leader>f :Ack<space>
+
 " Fugitive (git)
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :Gstatus<CR>

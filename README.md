@@ -60,6 +60,14 @@ I'll try to list them all here:
 
 ### Plugins
 
+#### Grep-like text finder ([Ack](https://github.com/mileszs/ack.vim))
+
+Ack.vim uses ack to search inside the current directory for a pattern. You can learn more about it with `:help Ack`.
+
+**Customizations:**
+
+- `<leader>f` brings up `:Ack`.
+
 #### Fuzzy finder (CtrlP)
 
 Fuzzy file, buffer, mru, and tag finder.
@@ -78,7 +86,7 @@ NERDTree is a file explorer plugin that provides "project drawer" functionality 
 
 **Customizations:**
 
-- `<leader>n` toggle explorer
+- `<leader>n` toggles explorer
 
 #### Git support (Fugitive)
 
