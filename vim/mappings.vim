@@ -104,3 +104,11 @@ imap <leader>/ <ESC><plug>NERDCommenterToggle<CR>i
 
 " NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
+
+" Tabular
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
