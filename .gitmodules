@@ -37,3 +37,6 @@
 [submodule "vim/bundles/utils/ack"]
 	path = vim/bundles/utils/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/bundles/syntaxes/slim"]
+	path = vim/bundles/syntaxes/slim
+	url = https://github.com/slim-template/vim-slim.git

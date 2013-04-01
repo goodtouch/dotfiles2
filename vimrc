@@ -6,6 +6,7 @@ if filereadable(expand("~/.vim/pathogen/autoload/pathogen.vim"))
   source ~/.vim/pathogen/autoload/pathogen.vim
   call pathogen#infect("~/.vim/bundles/colors")
   call pathogen#infect("~/.vim/bundles/utils")
+  call pathogen#infect("~/.vim/bundles/syntaxes")
 endif
 
 ""
