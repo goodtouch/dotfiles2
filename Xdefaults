@@ -1,12 +1,17 @@
+# Xft
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintlight
 Xft.rgba: rgb
+
+# rxvt configuration
 URxvt*loginShell:true
+
 URxvt*transparent:true
-URxvt*shading:40
+URxvt*shading:30
 URxvt*background:Black
 URxvt*foreground:White
+
 URxvt*scrollBar:true
 URxvt*scrollBar_right:true
 URxvt*scrollBar_floating:false
