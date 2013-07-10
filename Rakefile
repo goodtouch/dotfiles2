@@ -38,6 +38,9 @@ desc "install the dot files into user's home directory"
 task :install => :configure do
   replace_all = false
   files = Dir['*'] - %w[Rakefile README.md LICENSE config.yml config.yml.example]
+  if OS.mac?
+    files -= %w[Xdefaults awesome]
+  end
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
@@ -88,5 +91,15 @@ def link_file(file)
   else
     puts "linking ~/.#{file}"
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+  end
+end
+
+module OS
+  def self.mac?
+    (/darwin/ =~ RUBY_PLATFORM) != nil
+  end
+
+  def self.linux?
+    (/linux/ =~ RUBY_PLATFORM) != nil
   end
 end
