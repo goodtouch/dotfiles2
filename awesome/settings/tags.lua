@@ -19,7 +19,7 @@ layouts = {
 -- TAGS (aka screens)
 tags = {}
 tags = {
-  names  = { "term", "www", "code", "daemons", "5", "misc", "7", "8", "root" },
+  names  = { "term", "www", "code", "daemons", "5", "misc", "mail", "im", "root" },
   layout = { layouts[2], layouts[2], layouts[4], layouts[2], layouts[2], layouts[2], layouts[2], layouts[2], layouts[3] }
 }
 for s = 1, screen.count() do
