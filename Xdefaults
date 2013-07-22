@@ -1,7 +1,7 @@
 # Xft
-Xft.antialias: true
+Xft.antialias: rgba
 Xft.hinting: true
-Xft.hintstyle: hintlight
+Xft.hintstyle: hintslight
 Xft.rgba: rgb
 
 # rxvt configuration
@@ -22,15 +22,26 @@ URxvt*secondaryScroll:true
 URxvt*saveLines:32767
 URxvt*troughColor:#000000
 URxvt*scrollColor:#222222
-URxvt*font: xft:Dejavu Sans Mono:pixelsize=11
+
+! include file should have something like:
+!
+!   URxvt*boldColors: on
+!   URxvt*font: xft:Monaco:pixelsize=17:antialias=true:hinting=true:medium
+!   URxvt*boldFont: xft:Monaco:pixelsize=17:antialias=true:hinting=true:bold
+!
+!   include is relative to $HOME/
+#include ".Xresources-fonts"
 
 # with this set to true, when an app sends a bell to the terminal, awesome hilights the appropriate tag(s) ;)
 URxvt*urgentOnBell: true
 
+URxvt.perl-lib: .urxvt/
 # these three lines enable clicking on links to open them ;)
 ## if you want to enable tab support, append ,tabbed to the next line
 ## then use shift+down arrow to create tabs and shift+{left,right} arrows to switch between them
-URxvt*perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine
+URxvt*perl-ext-common: font,default,matcher,-option-popup,-selection-popup,-realine
 URxvt*matcher.button: 1
 # don't forget to change this to your favorite browser
 URxvt*urlLauncher: chromium
+URxvt.keysym.M-plus:      perl:font:increment
+URxvt.keysym.M-minus:    perl:font:decrement

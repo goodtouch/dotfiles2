@@ -37,9 +37,9 @@ end
 desc "install the dot files into user's home directory"
 task :install => :configure do
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.md LICENSE config.yml config.yml.example]
+  files = Dir['*'] - %w[Rakefile README.md LICENSE config.yml config.yml.example Xresources-font.example]
   if OS.mac?
-    files -= %w[Xdefaults awesome]
+    files -= %w[Xdefaults awesome urxvt]
   end
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//

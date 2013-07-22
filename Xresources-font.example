@@ -1,0 +1,10 @@
+/* Fonts */
+URxvt*boldColors: on
+URxvt*font: xft:Monaco:pixelsize=17:antialias=true:hinting=true:medium
+URxvt*boldFont: xft:Monaco:pixelsize=17:antialias=true:hinting=true:bold
+! vim:ft=xdefaults
+urxvt*boldFont:	xft:Monaco:pixelsize=13:antialias=true:hinting=true:bold
+urxvt*boldItalicFont:	
+urxvt*font:	xft:Monaco:pixelsize=13:antialias=true:hinting=true:medium
+urxvt*imFont:	
+urxvt*italicFont:	
