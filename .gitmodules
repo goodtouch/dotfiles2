@@ -43,3 +43,6 @@
 [submodule "vim/bundles/utils/tabular"]
 	path = vim/bundles/utils/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/bundles/syntaxes/coffee-script"]
+	path = vim/bundles/syntaxes/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
