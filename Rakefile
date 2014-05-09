@@ -2,6 +2,8 @@ require 'rake'
 require 'erb'
 require 'yaml'
 
+task :default => [:deps, :install]
+
 desc "check dependencies"
 task :deps do
   puts "checking dependencies..."
