@@ -6,15 +6,24 @@ desc "check dependencies"
 task :deps do
   puts "checking dependencies..."
   all_deps = true
+  missing_deps = []
   %w[ack ctags git].each do |dep|
     has_dep = ENV['PATH'].split(':').any? {|folder| File.exists?(folder + "/#{dep}")}
-    all_deps = all_deps && has_dep
+    unless has_dep
+      all_deps = false
+      missing_deps << dep
+    end
     puts "#{dep}: #{has_dep ? 'yes' : 'no'}"
   end
   if !all_deps
     puts "Some dependencies are missing, please consider installing them with:"
-    puts "sudo apt-get install exuberant-ctags ack-grep"
-    STDIN.getc
+    if OS.mac?
+      puts "brew install #{missing_deps.join}"
+    else
+      apt_deps = {'ctags' => 'exuberant-ctags', 'ack' => 'ack-grep', 'git' => 'git-core'}
+      puts "sudo apt-get install #{apt_deps.values_at(missing_deps).join}"
+    end
+    exit
   end
 end
 
