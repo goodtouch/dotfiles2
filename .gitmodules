@@ -49,3 +49,6 @@
 [submodule "tmux/plugins/tmux-resurrect"]
 	path = tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "vim/bundles/syntaxes/elixir"]
+	path = vim/bundles/syntaxes/elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
