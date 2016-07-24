@@ -48,15 +48,18 @@ I'll try to list them all here:
 - `<leader>cd` changes the path to the active buffer's file
 - `<leader>md` creates the directory of the active buffer's file (For example, when editing a new file for which the path does not exist.)
 - `<leader>ul` underlines the current line with =
-- `<leader>tw` toggles wrap
+- `<leader>tw` toggles line wrap
 - `<leader>fc` finds the next conflict marker (tested with Git conflicted files)
 - Remap `<Down>` and `<Up>` to `gj` and `gk` (Wrapped text is not considered a single long line of text.)
-- `<leader>hs` toggles highlight search
+- `<leader>hs` clear highlight search
 - `<leader>=` adjusts viewports to the same size (<C-w>=)
 - `<C-l>` shifts current line or selected lines rightwards (indent)
 - `<C-h>` shifts current line or selected lines leftwards (outdent)
 - `<C-k>` bubbles current line or selected lines upwards
 - `<C-l>` bubbles current line or selected lines downwards
+- `<C-Left>` go to previous buffer
+- `<C-Right>` go to next buffer
+- `<C-Down>` close curren buffer
 
 ### Plugins
 
@@ -114,3 +117,19 @@ Tabular makes it easy to align regions of text that match a pattern.
 #### Zoom Windows (ZoomWin)
 
 When working with split windows, ZoomWin lets you zoom into a window and out again using `<C-w> o`
+
+#### Installing plugins
+
+Vim plugins are installed as submodules in the following folders:
+
+- vim/bundles/colors : themes
+- vim/bundles/syntaxes : languages
+- vim/bundles/utils : rest
+
+Note that those folders are autoloaded with pathogen.
+
+To install a new plugin:
+
+```
+git submodule add <git repo url> vim/bundles/<plugin type>/<plugin name>
+```
