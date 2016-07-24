@@ -62,6 +62,14 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+
+""
+"" Airline
+""
+let g:airline_powerline_fonts=1            " Enable powerline fonts
+let g:airline#extensions#tabline#enabled=1 " Display the list of buffers
+set laststatus=2                           " Always display the status line
+
 ""
 "" The Silver Searcher
 ""
