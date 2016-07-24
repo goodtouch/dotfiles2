@@ -9,7 +9,7 @@ task :deps do
   puts "checking dependencies..."
   all_deps = true
   missing_deps = []
-  %w[ack ctags git].each do |dep|
+  %w[ag ctags git].each do |dep|
     has_dep = ENV['PATH'].split(':').any? {|folder| File.exists?(folder + "/#{dep}")}
     unless has_dep
       all_deps = false
@@ -22,7 +22,7 @@ task :deps do
     if OS.mac?
       puts "brew install #{missing_deps.join}"
     else
-      apt_deps = {'ctags' => 'exuberant-ctags', 'ack' => 'ack-grep', 'git' => 'git-core'}
+      apt_deps = {'ctags' => 'exuberant-ctags', 'ag' => 'silversearcher-ag', 'git' => 'git-core'}
       puts "sudo apt-get install #{apt_deps.values_at(missing_deps).join}"
     end
     exit

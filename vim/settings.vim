@@ -61,3 +61,11 @@ endif
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+""
+"" The Silver Searcher
+""
+let g:ackprg = 'ag --vimgrep'                                   " Use Ag over Ack
+set grepprg=ag\ --nogroup\ --nocolor                            " Use Ag over Grep
+let g:ctrlp_user_command='ag -Q -l --nocolor --hidden -g "" %s' " Use ag in CtrlP. Lightning fast and respects .gitignore
+let g:ctrlp_use_caching=0                                       " ag is fast, CtrlP doesn't need to cache
