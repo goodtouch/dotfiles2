@@ -26,8 +26,8 @@ imap <leader>p <ESC>:set invpaste<CR>:set paste?<CR>
 " Toggle text wrapping
 nmap <leader>tw :set invwrap<CR>:set wrap?<CR>
 
-" Toggle hlsearch
-nmap <leader>hs :set hlsearch! hlsearch?<CR>
+" Clear search highlight
+nmap <leader>hs :nohlsearch<CR>
 
 " cd to the directory containing the file in the buffer
 nmap <silent> <leader>cd :lcd %:h<CR>
