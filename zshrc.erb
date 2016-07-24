@@ -16,5 +16,18 @@ export EDITOR='vim'
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Custom functions
+# FIXME: move this to custom zsh folder and install it only if wanted in Rakefile
+
 # Keeping this at the end is a good idea ;-)
 source $ZSH/oh-my-zsh.sh
+
+# Go to ~/code (and complete)
+c() { cd ~/code/$1; }
+_c() { _files -W ~/code -/; }
+compdef _c c
+
+# Go to ~/ (and complete)
+h() { cd ~/$1; }
+_h() { _files -W ~/ -/; }
+compdef _h h
