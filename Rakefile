@@ -31,6 +31,7 @@ end
 
 desc "install the dot files into user's home directory"
 task :install => :configure do
+  update_submodules
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
@@ -142,6 +143,11 @@ def install_oh_my_zsh
       puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
     end
   end
+end
+
+def update_submodules
+  puts "fetching submodules"
+  system %Q{git submodule update --init}
 end
 
 module OS
