@@ -15,6 +15,9 @@ let mapleader = ","
 ""     http://vimdoc.sourceforge.net/htmldoc/map.html#mapmode-o
 ""
 
+" Make sure <alt+Right> move cursor forward to the end of word
+map f w
+
 " use :w!! to write to a file using sudo if you forgot to 'sudo vim file'
 " (it will prompt for sudo password when writing)
 cmap w!! %!sudo tee > /dev/null %
