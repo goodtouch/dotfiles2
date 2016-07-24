@@ -35,7 +35,7 @@ task :install => :configure do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.md LICENSE config.yml config.yml.example]
+  files = Dir['*'] - %w[Rakefile README.md LICENSE config.yml config.yml.example com.googlecode.iterm2.plist]
   if OS.mac?
     files -= %w[Xdefaults awesome]
   end
