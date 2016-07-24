@@ -82,6 +82,12 @@ nmap <C-j> ]e
 vmap <C-k> [egv
 vmap <C-j> ]egv
 
+" Buffer manipulation
+" match <C-Left, Right and Down on iTerm2 in terminal compatible keybindings mode)
+map [1;5D :bprev<CR>
+map [1;5C :bnext<CR>
+map [1;5B  :bdelete<CR>
+
 ""
 "" Bundles custom mappings
 ""
