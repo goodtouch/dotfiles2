@@ -64,9 +64,16 @@ endif
 "" Color Scheme
 ""
 
+if (has("termguicolors"))
+  set termguicolors
+endif
+" FIXME: remove or find a truecolor version of solarized
+" let g:solarized_termcolors=256
+" Disable Background Color Erase (Fix vim background in tmux)
+set t_ut=
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme gruvbox
+" colorscheme one
 
 
 ""
