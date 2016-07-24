@@ -29,22 +29,6 @@ task :deps do
   end
 end
 
-desc "create/update the config file"
-task :configure do
-  keys = YAML.load_file('config.yml.example').keys
-  current_config = File.exists?('config.yml') ? YAML.load_file('config.yml') : {}
-  keys.each do |k|
-    default = current_config[k] ? " (default: #{current_config[k]})" : ''
-    print "#{k}#{default}:"
-    v = $stdin.gets.strip
-    current_config[k] = v == "" ? current_config[k] : v
-  end
-  puts "Saving config file"
-  File.open('config.yml', 'w') do |out|
-    YAML.dump current_config, out
-  end
-end
-
 desc "install the dot files into user's home directory"
 task :install => :configure do
   install_oh_my_zsh
@@ -80,6 +64,25 @@ task :install => :configure do
     else
       link_file(file)
     end
+  end
+end
+
+desc "create/update the config file"
+task :configure do
+  keys = YAML.load_file('config.yml.example').keys
+  current_config = File.exists?('config.yml') ? YAML.load_file('config.yml') : {}
+  if OS.mac?
+    current_config['name'] ||= `osascript -e "long user name of (system info)"`.strip
+  end
+  keys.each do |k|
+    default = current_config[k] ? " (default: #{current_config[k]})" : ''
+    print "#{k}#{default}:"
+    v = $stdin.gets.strip
+    current_config[k] = v == "" ? current_config[k] : v
+  end
+  puts "Saving config file"
+  File.open('config.yml', 'w') do |out|
+    YAML.dump current_config, out
   end
 end
 
