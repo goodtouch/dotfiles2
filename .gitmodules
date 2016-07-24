@@ -52,3 +52,12 @@
 [submodule "vim/bundles/syntaxes/elixir"]
 	path = vim/bundles/syntaxes/elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "vim/bundles/utils/airline"]
+	path = vim/bundles/utils/airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/bundles/colors/one"]
+	path = vim/bundles/colors/one
+	url = https://github.com/rakr/vim-one.git
+[submodule "vim/bundles/colors/gruvbox"]
+	path = vim/bundles/colors/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
