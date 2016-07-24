@@ -1,7 +1,5 @@
---- 
-:verbose: true
+---
 gem: --no-ri --no-rdoc
-:update_sources: true
-:backtrace: false
-:sources: 
-- http://gems.rubyforge.org
+:verbose: true          # normal output
+:update_sources: true   # automatic update of the source metadata cache
+:backtrace: false       # don't show backtrace on errors
