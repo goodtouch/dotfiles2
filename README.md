@@ -6,7 +6,7 @@ These are config files to set up a system the way I like it.
 
 ``` bash
 git clone git://github.com/goodtouch/dotfiles2 ~/.dotfiles
-cd .dotfiles
+cd ~/.dotfiles
 rake install
 ```
 
