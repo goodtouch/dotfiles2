@@ -5,11 +5,11 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="nebirhos"
 
-plugins=(git bundler gem grunt<% if OS.mac? %> brew<% end %> z)
+plugins=(git bundler gem<% if OS.mac? %> brew<% end %> npm yarn z)
 
 # User configuration
 
-export PATH="<%= ENV['HOME'] %>/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="<%= ENV['HOME'] %>/bin:<%= ENV['HOME'] %>/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR='vim'
 
 # rbenv
